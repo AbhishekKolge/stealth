@@ -1,13 +1,13 @@
 {
   "name": "root",
-  "description": "Secure boilerplate for Electron app based on Vite",
-  "version": "3.1.0",
+  "description": "Stealth",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "author": {
-    "email": "kozackunisoft@gmail.com",
-    "name": "Alex Kozack",
-    "url": "https://kozack.me"
+    "email": "abhishekkolge96@gmail.com",
+    "name": "Abhishek Kolge",
+    "url": "https://abhishekkolge.vercel.app"
   },
   "main": "packages/entry-point.mjs",
   "workspaces": [
@@ -17,6 +17,7 @@
     "node": ">=23.0.0"
   },
   "scripts": {
+    "commit": "commit",
     "build": "npm run build -ws --if-present",
     "compile": "npm run build && electron-builder build --config electron-builder.mjs",
     "test": "npx playwright test ./tests/e2e.spec.ts",
@@ -24,9 +25,13 @@
     "typecheck": "npm run typecheck -ws --if-present",
     "create-renderer": "cd packages && node ./integrate-renderer/create-renderer.js",
     "integrate-renderer": "npm start --workspace @app/integrate-renderer",
-    "init": "npm run create-renderer && npm run integrate-renderer && npm install"
+    "init": "npm run create-renderer && npm run integrate-renderer && npm install",
+    "prepare": "husky && husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/prompt-cli": "^19.8.1",
     "@npmcli/map-workspaces": "4.0.2",
     "@playwright/test": "1.54.1",
     "@types/node": "24.0.14",
@@ -34,9 +39,15 @@
     "electron": "37.2.3",
     "electron-builder": "26.0.12",
     "glob": "11.0.3",
-    "playwright": "^1.54.1"
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "playwright": "^1.54.1",
+    "prettier": "3.6.2"
   },
   "dependencies": {
     "@app/main": "*"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }

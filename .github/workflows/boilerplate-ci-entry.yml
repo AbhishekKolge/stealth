@@ -8,16 +8,16 @@ on:
     branches:
       - main
     paths-ignore:
-      - '**.md'
+      - "**.md"
       - .editorconfig
-      - '.idea/**'
-      - '.vscode/**'
+      - ".idea/**"
+      - ".vscode/**"
   pull_request:
     paths-ignore:
-      - '**.md'
+      - "**.md"
       - .editorconfig
-      - '.idea/**'
-      - '.vscode/**'
+      - ".idea/**"
+      - ".vscode/**"
 
 concurrency:
   group: ${{github.workflow}}-${{ github.ref }}
@@ -56,11 +56,11 @@ jobs:
           - svelte
           - svelte-ts
 
-#            qwik and solid plugins doesnt support view v7 at the moment
-#          - solid
-#          - solid-ts
-#          - qwik
-#          - qwik-ts
+  #            qwik and solid plugins doesnt support view v7 at the moment
+  #          - solid
+  #          - solid-ts
+  #          - qwik
+  #          - qwik-ts
 
   dependabot:
     permissions:
