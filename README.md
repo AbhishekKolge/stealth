@@ -319,6 +319,8 @@ npm run init
 
 Set up the initial environment by creating a new renderer, integrating it, and installing the necessary packages.
 
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/AbhishekKolge/stealth?utm_source=oss&utm_medium=github&utm_campaign=AbhishekKolge%2Fstealth&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+
 ## Contribution
 
 See [Contributing Guide](CONTRIBUTING.md).
