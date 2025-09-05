@@ -1,19 +1,12 @@
 {
-	"compilerOptions": {
-		"target": "ESNext",
-		"module": "ESNext",
-		"moduleResolution": "bundler",
-		"verbatimModuleSyntax": true,
-		"strict": true,
-		"skipLibCheck": true,
-		"baseUrl": "./",
-		"paths": {
-			"@/*": ["./src/*"]
-		},
-		"outDir": "./dist",
-		"types": ["bun"],
-		"composite": true,
-		"jsx": "react-jsx",
-		"jsxImportSource": "hono/jsx"
-	}
+  "extends": "@workspace/typescript-config/bun.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "outDir": "./dist",
+    "composite": true,
+    "jsxImportSource": "hono/jsx"
+  }
 }
